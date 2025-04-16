@@ -50,7 +50,7 @@
 //   const sbmtHandler = (e)=>{
 //     e.preventDefault()
 //     console.log("hello")
-    
+
 //   }
 
 //   return (
@@ -81,7 +81,7 @@
 //     e.preventDefault()
 
 //     console.log("submt", username);
-    
+
 //     setUsername('')
 //   }
 
@@ -118,7 +118,7 @@
 // const sbmtHandler = (e) =>{
 //   e.preventDefault()
 //  console.log(userName);
- 
+
 //   setUserName('')
 // }
 
@@ -147,3 +147,21 @@
 
 
 
+// Fragments :  Empety tag/*
+//  <> </>
+//  */
+
+import React from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+const App = () => {
+    return (
+        <div>
+            <Header />
+            <Footer />
+        </div>
+    )
+}
+
+export default App
