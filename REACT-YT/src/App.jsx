@@ -152,14 +152,13 @@
 //  */
 
 import React from 'react'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Card from './assets/props_concept/Card'
 
 const App = () => {
+    const user = "Lokesh"
     return (
         <div>
-            <Header />
-            <Footer />
+            <Card user={user}/>
         </div>
     )
 }
