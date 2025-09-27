@@ -1,5 +1,5 @@
 // import React, { useEffect, useState } from "react";
-import Navbar from "./pages/React Router DOM/Navbar";
+import Navbar from "./pages/React-Router-DOM/Navbar";
 import Hooks from "./components/Hooks/Hooks";
 import Cards from "./components/Props Or Props Drilling/Cards";
 import TwoWayBinding from "./components/Two Way Binding/TwoWayBinding";
@@ -8,10 +8,10 @@ import Footer from "./components/Footer/Footer";
 // import axios from "axios";
 import Api from "./components/Api Calling with Axios/Api";
 import { Route, Routes } from "react-router-dom";
-import About from "./pages/React Router DOM/About";
-import Home from "./pages/React Router DOM/Home";
-import Contact from "./pages/React Router DOM/Contact";
-import Product from "./pages/React Router DOM/Product";
+import About from "./pages/React-Router-DOM/About";
+import Home from "./pages/React-Router-DOM/Home";
+import Contact from "./pages/React-Router-DOM/Contact";
+import Product from "./pages/React-Router-DOM/Product";
 
 const App = () => {
   // const [data, setData] = useState([]);
