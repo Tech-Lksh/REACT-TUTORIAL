@@ -1,25 +1,30 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "./pages/Navbar";
+// import React, { useEffect, useState } from "react";
+import Navbar from "./pages/React Router DOM/Navbar";
 import Hooks from "./components/Hooks/Hooks";
 import Cards from "./components/Props Or Props Drilling/Cards";
 import TwoWayBinding from "./components/Two Way Binding/TwoWayBinding";
 import FormHandling from "./components/Form Handling/FormHandling";
 import Footer from "./components/Footer/Footer";
-import axios from "axios";
+// import axios from "axios";
 import Api from "./components/Api Calling with Axios/Api";
+import { Route, Routes } from "react-router-dom";
+import About from "./pages/React Router DOM/About";
+import Home from "./pages/React Router DOM/Home";
+import Contact from "./pages/React Router DOM/Contact";
+import Product from "./pages/React Router DOM/Product";
 
 const App = () => {
-  const [data, setData] = useState([]);
-  const getData = async () => {
-    const response = await axios.get("https://picsum.photos/v2/list");
+  // const [data, setData] = useState([]);
+  // const getData = async () => {
+  //   const response = await axios.get("https://picsum.photos/v2/list");
 
-    setData(response.data);
-    console.log(data);
-  };
+  //   setData(response.data);
+  //   console.log(data);
+  // };
 
-  useEffect(() => {
-    getData()
-  }, [])
+  // useEffect(() => {
+  //   getData()
+  // }, [])
   
 
   // const users = [
@@ -62,15 +67,30 @@ const App = () => {
 
   return (
     <div className="p-10">
-      
-      <div className="p-5 mt-5 bg-emerald-600 text-black">
-        {/* <button onClick={getData} className="text-white bg-blue-600 font-semibold py-3 px-9 rounded-full active:scale-90">
+      <Navbar />
+
+      <Routes >
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/hooks" element={<Hooks />} />
+        <Route path="/cards" element={<Cards />} />
+        <Route path="/twowaybinding" element={<TwoWayBinding />} />
+        <Route path="/foemhandling" element={<FormHandling />} />
+        <Route path="/footer" element={<Footer />} />
+        <Route path="/api" element={<Api />} />
+      </Routes>
+
+      {/* Api Calling with Axios */}
+      {/* <div className="p-5 mt-5 bg-emerald-600 text-black">
+        <button onClick={getData} className="text-white bg-blue-600 font-semibold py-3 px-9 rounded-full active:scale-90">
         Get Data
-      </button> */}
+      </button>
         {data.map((props, index) => {
           return <Api key={index} name={props.author} img={props.download_url} id={props.id}/>;
         })}
-      </div>
+      </div> */}
 
       {/* Promises */}
       {/* <div className="p-10">
