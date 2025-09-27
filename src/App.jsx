@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./pages/Navbar";
 import Hooks from "./components/Hooks/Hooks";
 import Cards from "./components/Props Or Props Drilling/Cards";
@@ -16,6 +16,11 @@ const App = () => {
     setData(response.data);
     console.log(data);
   };
+
+  useEffect(() => {
+    getData()
+  }, [])
+  
 
   // const users = [
   //   {
@@ -59,9 +64,9 @@ const App = () => {
     <div className="p-10">
       
       <div className="p-5 mt-5 bg-emerald-600 text-black">
-        <button onClick={getData} className="text-white bg-blue-600 font-semibold py-3 px-9 rounded-full active:scale-90">
+        {/* <button onClick={getData} className="text-white bg-blue-600 font-semibold py-3 px-9 rounded-full active:scale-90">
         Get Data
-      </button>
+      </button> */}
         {data.map((props, index) => {
           return <Api key={index} name={props.author} img={props.download_url} id={props.id}/>;
         })}
